@@ -2,7 +2,7 @@ from googleapiclient import discovery
 from google.oauth2 import service_account
 
 credentials = service_account.Credentials.from_service_account_file('keyfile.json', scopes=['https://www.googleapis.com/auth/drive.metadata.readonly'])
-delegated_credentials = credentials.with_subject('dustin@ckk.dev')
+delegated_credentials = credentials.with_subject('info@email.com')
 service = discovery.build('drive', 'v3', credentials=delegated_credentials)
 
 # Call the Drive v3 API
